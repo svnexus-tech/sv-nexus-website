@@ -16,6 +16,32 @@
 
 <body>
 
+  <!-- Webinar Popup -->
+<div id="webinarPopup" class="popup-overlay">
+  <div class="popup-box">
+
+    <span class="close-popup" onclick="closePopup()">✖</span>
+
+    <h2>🚀 Free Live Webinar</h2>
+    <p class="popup-sub">
+      Become Job-Ready with Practical Tech Skills
+    </p>
+
+    <div class="popup-details">
+      <p>📅 Sunday</p>
+      <p>⏰ 7:00 PM</p>
+      <p>💻 Online (Google Meet)</p>
+    </div>
+
+    <a href="https://forms.gle/zjLxsGVDWoxdYm2B7" class="btn primary">
+      Register Free
+    </a>
+
+    <p class="popup-note">Limited seats available</p>
+
+  </div>
+</div>
+
 <header class="navbar">
   <a href="#" class="logo">
     <!--<div class="logo-mark"><span>SV</span></div>-->
@@ -53,7 +79,7 @@
       </a>
 
       <!-- Replace 91YOURNUMBER with your WhatsApp number -->
-      <a href="https://wa.me/91YOURNUMBER?text=Hi%20SV%20Nexus%2C%20I%20want%20to%20know%20about%20the%20mentoring%20program" class="btn whatsapp-btn" target="_blank">
+      <a href="https://wa.me/917603850678?text=Hi%20SV%20Nexus%2C%20I%20want%20to%20know%20about%20the%20mentoring%20program" class="btn whatsapp-btn" target="_blank">
         WhatsApp Us
       </a>
     </div>
@@ -262,7 +288,7 @@
 </section>
 
 <!-- Replace 91YOURNUMBER with your WhatsApp number -->
-<a class="whatsapp-floating" href="https://wa.me/91YOURNUMBER?text=Hi%20SV%20Nexus%2C%20I%20want%20to%20know%20about%20the%20program" target="_blank">💬</a>
+<a class="whatsapp-floating" href="https://wa.me/917603850678?text=Hi%20SV%20Nexus%2C%20I%20want%20to%20know%20about%20the%20program" target="_blank">💬</a>
 
 <footer>
   <div class="footer-logo">
@@ -284,4 +310,16 @@
 </footer>
 
 </body>
+<script>
+  if (!localStorage.getItem("popupShown")) {
+    setTimeout(() => {
+      document.getElementById("webinarPopup").style.display = "flex";
+      localStorage.setItem("popupShown", "true");
+    }, 3000);
+  }
+
+  function closePopup() {
+    document.getElementById("webinarPopup").style.display = "none";
+  }
+</script>
 </html>
